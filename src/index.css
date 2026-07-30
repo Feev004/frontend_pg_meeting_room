@@ -1,5 +1,11 @@
 :root {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: #111827;
@@ -23,7 +29,17 @@ body {
 .app-shell {
   max-width: 960px;
   margin: 0 auto;
-  padding: 24px;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .topbar {
@@ -63,4 +79,73 @@ button {
   background: #2563eb;
   color: white;
   cursor: pointer;
+}
+
+.login-box {
+  width: 350px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4facfe;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1f8fff;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.footer a {
+  color: #4facfe;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
