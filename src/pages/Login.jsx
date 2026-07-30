@@ -21,7 +21,15 @@ function Login() {
       const data = await response.json();
       if (data.success) {
         localStorage.setItem("user", JSON.stringify(data.user));
-        navigate("/Home");
+        console.log("Login successful:", data);
+        console.log("test successful:", data.user.role);
+        if (data.user.role === "Admin") {
+          navigate("/Admin");
+        } else if (data.user.role === "Staff") {
+          navigate("/Staff");
+        } else if (data.user.role === "User") {
+          navigate("/Home");
+        }
       } else {
         alert(data.message);
       }
