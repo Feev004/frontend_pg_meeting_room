@@ -118,7 +118,7 @@ function Admin() {
         },
       );
 
-      const data = await response.json();
+      const data = await response.json();  
 
       if (response.ok) {
         alert("บันทึกข้อมูลสำเร็จ!");
