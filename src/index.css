@@ -27,18 +27,19 @@ body {
 }
 
 .app-shell {
-  max-width: 960px;
+  /* max-width: 960px; */
   margin: 0 auto;
   min-height: 100vh;
 
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 main {
   flex: 1;
 
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   align-items: center;
 }
 
@@ -71,7 +72,7 @@ nav a {
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-button {
+.login-box button {
   margin-top: 12px;
   border: 0;
   border-radius: 999px;
@@ -79,6 +80,18 @@ button {
   background: #2563eb;
   color: white;
   cursor: pointer;
+}
+.login-box button:hover {
+  background: #1f8fff;
+  transform: translateY(-2px);
+}
+
+.login-box button:active {
+  transform: scale(0.98);
+}
+.navbar-toggler {
+    width: auto !important;
+    padding: .25rem .75rem;
 }
 
 .login-box {
@@ -148,4 +161,11 @@ button:active {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+.td-button {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  width: 50%;
 }

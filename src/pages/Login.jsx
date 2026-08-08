@@ -8,8 +8,9 @@ function Login() {
 
   async function handleLogin() {
     try {
-      const response = await fetch("http://192.168.201.43:5000/login", {
+      const response = await fetch("http://192.168.201.77:5000/login", {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
@@ -40,7 +41,8 @@ function Login() {
   }
 
   return (
-    <div className="login-box">
+    <main className="app-shell">
+    <div className="login-box" >
       <h1>Login</h1>
       <div className="input-group">
         <input
@@ -64,6 +66,7 @@ function Login() {
         <a href="#">Register</a>
       </div>
     </div>
+    </main>
   );
 }
 
